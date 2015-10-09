@@ -1,0 +1,108 @@
+.grid-circle span {
+  position: relative;
+  display: block;
+  width: 25%;
+  height: 25%;
+  margin: 4%;
+  background: #fff;
+  float: left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.grid-circle span:nth-child(1) {
+  -webkit-animation: grid-fade 1.363s -.838s linear infinite;
+  -moz-animation: grid-fade 1.363s -.838s linear infinite;
+  -ms-animation: grid-fade 1.363s -.838s linear infinite;
+  -o-animation: grid-fade 1.363s -.838s linear infinite;
+  animation: grid-fade 1.363s -.838s linear infinite;
+}
+
+.grid-circle span:nth-child(2) {
+  -webkit-animation: grid-fade .706s -.409s linear infinite;
+  -moz-animation: grid-fade .706s -.409s linear infinite;
+  -ms-animation: grid-fade .706s -.409s linear infinite;
+  -o-animation: grid-fade .706s -.409s linear infinite;
+  animation: grid-fade .706s -.409s linear infinite;
+}
+
+.grid-circle span:nth-child(3) {
+  -webkit-animation: grid-fade 1.015s -.6s linear infinite;
+  -moz-animation: grid-fade 1.015s -.6s linear infinite;
+  -ms-animation: grid-fade 1.015s -.6s linear infinite;
+  -o-animation: grid-fade 1.015s -.6s linear infinite;
+  animation: grid-fade 1.015s -.6s linear infinite;
+}
+
+.grid-circle span:nth-child(4) {
+  -webkit-animation: grid-fade 1.045s -1.052s linear infinite;
+  -moz-animation: grid-fade 1.045s -1.052s linear infinite;
+  -ms-animation: grid-fade 1.045s -1.052s linear infinite;
+  -o-animation: grid-fade 1.045s -1.052s linear infinite;
+  animation: grid-fade 1.045s -1.052s linear infinite;
+}
+
+.grid-circle span:nth-child(5) {
+  -webkit-animation: grid-fade 1.013s -1.158s linear infinite;
+  -moz-animation: grid-fade 1.013s -1.158s linear infinite;
+  -ms-animation: grid-fade 1.013s -1.158s linear infinite;
+  -o-animation: grid-fade 1.013s -1.158s linear infinite;
+  animation: grid-fade 1.013s -1.158s linear infinite;
+}
+
+.grid-circle span:nth-child(6) {
+  -webkit-animation: grid-fade .916s -.823s linear infinite;
+  -moz-animation: grid-fade .916s -.823s linear infinite;
+  -ms-animation: grid-fade .916s -.823s linear infinite;
+  -o-animation: grid-fade .916s -.823s linear infinite;
+  animation: grid-fade .916s -.823s linear infinite;
+}
+
+.grid-circle span:nth-child(7) {
+  -webkit-animation: grid-fade 1.263s -1.12s linear infinite;
+  -moz-animation: grid-fade 1.263s -1.12s linear infinite;
+  -ms-animation: grid-fade 1.263s -1.12s linear infinite;
+  -o-animation: grid-fade 1.263s -1.12s linear infinite;
+  animation: grid-fade 1.263s -1.12s linear infinite;
+}
+
+.grid-circle span:nth-child(8) {
+  -webkit-animation: grid-fade 1.241s -1.03s linear infinite;
+  -moz-animation: grid-fade 1.241s -1.03s linear infinite;
+  -ms-animation: grid-fade 1.241s -1.03s linear infinite;
+  -o-animation: grid-fade 1.241s -1.03s linear infinite;
+  animation: grid-fade 1.241s -1.03s linear infinite;
+}
+
+.grid-circle span:nth-child(9) {
+  -webkit-animation: grid-fade .866s -.638s linear infinite;
+  -moz-animation: grid-fade .866s -.638s linear infinite;
+  -ms-animation: grid-fade .866s -.638s linear infinite;
+  -o-animation: grid-fade .866s -.638s linear infinite;
+  animation: grid-fade .866s -.638s linear infinite;
+}
+
+@keyframes grid-fade {
+  50% {
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes grid-fade {
+  50% {
+    opacity: .2;
+  }
+}
+
+@-moz-keyframes grid-fade {
+  50% {
+    opacity: .2;
+  }
+}
+
+@-o-keyframes grid-fade {
+  50% {
+    opacity: .2;
+  }
+}

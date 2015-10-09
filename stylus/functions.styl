@@ -1,0 +1,47 @@
+prefixs = 'official' 'webkit' 'ms' 'moz' 'o'
+
+
+
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	-ms-{prop} args
+	-o-{prop} args
+	{prop} args
+	
+
+vendor-border(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+			
+
+vendor-anim(pre, prop, args)
+	if pre == 'official'
+		-webkit-{prop} args
+		-moz-{prop} args
+		-ms-{prop} args
+		-o-{prop} args
+		{prop} args
+	
+	else if pre == 'webkit'
+		-webkit-{prop} args
+	else if pre == 'moz'
+		-moz-{prop} args
+	else if pre == 'o'
+		-o-{prop} args
+	else if pre == 'ms'
+		-ms-{prop} args
+	
+
+random(min,max)
+	return math(math(0, 'random')*(max - min + 1) + min, 'floor')
+	
+
+random_time(min,max)
+	return (random(min, max)/1000 s)
+	
+
+
+suit_color(num)
+	colors = (#d35400 #4aa3df #1abc9c #c0392b #9b59b6 #f1c40f #7f8c8d #56799C #27ae60 #e74c3c #34495e #95a5a6 #e67e22 #2E23FE #23A02D #f1c40f)

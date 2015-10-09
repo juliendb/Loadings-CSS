@@ -1,0 +1,677 @@
+@import "functions.styl"
+
+
+
+vendor-grid(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	size = (100 / 4) %
+	
+
+	span
+		position relative
+		display block
+		width size
+		height size
+		margin 4%
+		background color
+		float left
+		
+
+	&.grid-fade-random
+		for i in (1..9)
+			span:nth-child({i})
+				vendor(animation, grid-fade random_time(600, 1400) random_time(-1200, -200) easing infinite)
+	
+	&.grid-pulse-random
+		for i in (1..9)
+			span:nth-child({i})
+				vendor(animation, grid-pulse random_time(600, 1400) random_time(-1200, -200) easing infinite)
+
+	
+
+
+
+
+
+vendor-circle-bead(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear	
+
+	
+	size = 20%
+	numb = 8
+		
+	offset = 360 / numb
+	
+
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+	
+	.contain
+		position absolute
+		display block
+		width size
+		height size
+		top 50%
+		left 50%
+		margin -(size/2)
+		
+		vendor(transform-origin, 50% 50%)
+		
+		span
+			position relative
+			display block
+			width 100%
+			height 100%
+			background color
+			
+			vendor-border(border-radius, 50%)
+
+	for i in (1..numb)
+		.contain:nth-child({i})
+			vendor(transform, rotate((offset* i) deg) translate(200%) rotate(-(offset* i) deg))
+	
+	
+	&.bead-pulse
+		for i in (1..numb)
+			.contain:nth-child({i}) span
+				vendor(animation, group-pulse 1.2s (-0.2*i s) easing infinite)
+						
+	&.bead-fade
+		for i in (1..numb)
+			.contain:nth-child({i}) span
+				vendor(animation, group-fade 1.2s (-0.2*i s) easing infinite)
+
+
+
+
+
+
+		
+
+
+
+vendor-echo(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	numb = 3
+
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+
+		span
+			position absolute
+			display block
+			width 100%
+			height 100%
+			left 0%
+			top 0%
+			background color
+			
+			vendor-border(border-radius, 50%)
+			vendor(animation, echo 1s easing infinite)
+
+			for i in (1..numb)
+				&:nth-child({i})
+					vendor(animation-delay, (-0.2*i s))
+
+
+
+
+
+vendor-bounce(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+	
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+
+		span
+			position absolute
+			display block
+			width 100%
+			height 100%
+			background #fff
+			opacity 0.6
+
+			vendor(animation, bounce 2s easing infinite)
+			
+			&:nth-child(1)
+				vendor(animation-delay, -1s)
+
+
+
+
+
+vendor-turn-around(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+		
+		vendor(animation, group-beat-turn 1s easing infinite)
+
+		span
+			position absolute
+			display block
+			left 0%
+			top 0%
+			background color
+			
+			vendor-border(border-radius, 50%)
+			
+			&:nth-child(1)
+				width 100%
+				height 100%
+				background none
+				border solid 3px color
+				
+				vendor-border(box-sizing, border-box)
+				
+			&:nth-child(2)
+				top 20%
+				left 20%
+				width 20%
+				height 20%
+
+
+
+
+
+
+sizes = 40% 70% 100%
+
+vendor-turn-multiple(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+		
+		span
+			position absolute
+			display block
+			left 50%
+			top 50%
+			background none
+			border solid 3px transparent
+			border-left-color color
+			border-right-color color
+			
+			vendor-border(box-sizing, border-box)
+			vendor-border(border-radius, 50%)
+			
+			for size, i in sizes
+				&:nth-child({i+1})
+					width size
+					height size
+					margin -(size/2)
+			
+
+			vendor(animation, group-turn-multiple 1.2s easing infinite)
+		
+			for i in (0..2)
+				&:nth-child({i+1})
+					vendor(animation-delay, (-0.5+0.15* i s))
+
+
+
+
+vendor-turn-multiple-random(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+		
+		span
+			position absolute
+			display block
+			left 50%
+			top 50%
+			background none
+			border solid 3px transparent
+			border-left-color color
+			border-right-color color
+			
+			vendor-border(box-sizing, border-box)
+			vendor-border(border-radius, 50%)
+			
+			for size, i in sizes
+				&:nth-child({i+1})
+					width size
+					height size
+					margin -(size/2)
+
+					vendor(animation, group-turn-multiple random_time(800, 2400) random_time(-150, -800) easing infinite alternate)
+
+
+
+
+
+
+
+
+
+
+vendor-beat(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+		
+	numb = 3
+	size = (100 / (numb+1)) %
+	
+
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+	
+		span
+			position relative
+			display block
+			width size
+			height size
+			margin-left (((100-(size*numb)) / (numb+1)) %)
+			margin-top (-(size/2) %)
+			top 50%
+			background color
+			float left
+			
+
+	&.circle-beat,
+	&.circle-beat-in,
+	&.circle-beat-out
+		span
+			vendor(animation, group-beat 0.8s easing infinite)
+			
+	&.circle-beat
+		for i in (1..numb)
+			span:nth-child({i})
+				vendor(animation-delay, (-1+(0.2*i) s))
+
+	&.circle-beat-in
+		span:nth-child(1), span:nth-child(3)
+			vendor(animation-delay, -0.1s)
+		span:nth-child(2)
+			vendor(animation-delay, -0.4s)
+
+	&.circle-beat-out
+		span:nth-child(1), span:nth-child(3)
+			vendor(animation-delay, -0.4s)
+		span:nth-child(2)
+			vendor(animation-delay, -0.1s)
+			
+
+	&.circle-beat-random
+		for i in (1..numb)
+			span:nth-child({i})
+				vendor(animation, group-beat random_time(400, 1200) random_time(-1000, -200) easing infinite)
+
+
+	
+
+
+
+
+vendor-dual-beat(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear	
+
+	size = 50%
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+	
+		span
+			position absolute
+			display block
+			width size
+			height size
+			top 25%
+			background color
+			
+			&:nth-child(1)
+				left 0%
+			&:nth-child(2)
+				right 0%
+	
+
+	&.circle-dual-beat,
+	&.circle-dual-beat-turn
+		for i in (1..2)
+			span:nth-child({i})
+				vendor(animation, group-beat 1.2s ((-0.8*i) s) easing infinite)
+				
+	&.circle-dual-beat-turn
+		.group
+			vendor(animation, group-beat-turn 2.4s easing infinite)
+
+
+
+
+
+
+
+vendor-bar(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+		
+	numb = 5
+	size = (100 / 8) %
+	
+
+	span
+		position relative
+		display block
+		width size
+		height 100%
+		top 0%
+		margin-left (((100-(size*numb)) / (numb+1)) %)
+		background color
+		float left
+		
+
+	&.bar-pulse,
+	&.bar-pulse-in,
+	&.bar-pulse-out
+		span
+			vendor(animation, bar-pulse 1.2s easing infinite)
+	
+
+	&.bar-pulse
+		for i in (1..5)
+			span:nth-child({i})
+				vendor(animation-delay, (-1+(0.2*i) s))
+
+	&.bar-pulse-in
+		span:nth-child(3)
+			vendor(animation-delay, -0.7s)
+		
+		span:nth-child(2), span:nth-child(4)
+			vendor(animation-delay, -0.4s)
+			
+		span:nth-child(1), span:nth-child(5)
+			vendor(animation-delay, -0.1s)	
+
+	&.bar-pulse-out
+		span:nth-child(3)
+			vendor(animation-delay, -0.1s)
+		
+		span:nth-child(2), span:nth-child(4)
+			vendor(animation-delay, -0.4s)
+			
+		span:nth-child(1), span:nth-child(5)
+			vendor(animation-delay, -0.7s)
+			
+
+	&.bar-pulse-random
+		for i in (1..numb)
+			span:nth-child({i})
+				vendor(animation, bar-pulse random_time(400, 1200) random_time(-1000, -200) easing infinite)
+				
+
+
+
+
+
+
+values-quad = (0% 0%) (66.6% 0%) (0% 66.6%) (66.6% 66.6%)
+
+vendor-move-quad(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	size = (100 / 4) %
+
+
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+		
+		span
+			position absolute
+			display block
+			width size
+			height size
+			margin 4%
+			background #fff
+			
+			vendor(animation, 2.4s easing infinite)
+	
+		for value, i in values-quad
+			span:nth-child({i+1})
+				left (value[0])
+				top (value[1])
+				vendor(animation-name, move-quad+(i+1))
+				
+
+
+
+
+values-tria = (33.3% 0%) (0% 66.6%) (66.6% 66.6%)
+
+vendor-move-tria(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	size = (100 / 4) %
+
+
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+		
+		span
+			position absolute
+			display block
+			width size
+			height size
+			margin 4%
+			background #fff
+			
+			vendor(animation, 2.4s easing infinite)
+	
+		for value, i in values-tria
+			span:nth-child({i+1})
+				left (value[0])
+				top (value[1])
+				vendor(animation-name, move-tria+(i+1))
+
+
+
+
+
+
+
+
+
+vendor-bounce(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+	
+	
+	.group
+		position relative
+		width 100%
+		height 100%
+		top 0%
+		left 0%
+		margin 0
+
+		span
+			position absolute
+			display block
+			width 100%
+			height 100%
+			background #fff
+			opacity 0.6
+
+			vendor(animation, bounce 2s easing infinite)
+			
+			&:nth-child(1)
+				vendor(animation-delay, -1s)
+
+
+
+
+
+
+vendor-folding(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+		
+	size = 50%
+
+	span
+		position relative
+		display block
+		width size
+		height size
+		background color
+		float left
+		
+		&:nth-child(2)
+			vendor(transform-origin, 0% 100%)
+			vendor(animation, square-folding1 2.4s easing infinite)
+		
+		&:nth-child(3)
+			vendor(transform-origin, 100% 0%)
+			vendor(animation, square-folding3 2.4s easing infinite)
+			
+		&:nth-child(4)
+			vendor(transform-origin, 0% 0%)
+			vendor(animation, square-folding2 2.4s easing infinite)
+
+
+
+
+
+
+
+vendor-diamond(color = null, easing = null)
+	if color == null
+		color = #fff
+	
+	if easing == null
+		easing = linear
+
+	size = 50%
+
+	.group
+		position relative
+		display block
+		width 80%
+		height 80%
+		left 10%
+		top 10%
+		
+		vendor(transform, rotate(45deg))
+
+		span
+			position relative
+			display block
+			width size
+			height size
+			background color
+			float left
+		
+			for i in (1..4)
+				&:nth-child({i})
+					vendor(animation, rotate-diamond+i 3s easing infinite)

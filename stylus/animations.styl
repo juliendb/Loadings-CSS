@@ -1,0 +1,182 @@
+@import "functions.styl"
+
+
+
+for prefix in prefixs
+	vendors = prefix
+	
+	
+	@keyframes grid-fade
+		50%
+			opacity 0.2
+			
+
+	@keyframes grid-pulse
+		50%
+			vendor-anim(prefix, transform, scale(0.3))
+			opacity 0.2
+			
+	
+	
+	@keyframes group-fade
+		50%
+			opacity 0.2
+
+
+	@keyframes group-pulse
+		50%
+			vendor-anim(prefix, transform, scale(0.3))
+			opacity 0.2
+			
+
+	@keyframes group-beat
+		50%
+			vendor-anim(prefix, transform, scale(0.2))
+	
+	@keyframes group-beat-turn
+		0%
+			vendor-anim(prefix, transform, rotate(20deg))
+		100%
+			vendor-anim(prefix, transform, rotate(380deg))
+			
+
+
+	@keyframes group-turn-multiple
+		0%
+			vendor-anim(prefix, transform, rotate(45deg))
+		85%, 100%
+			vendor-anim(prefix, transform, rotate(405deg))
+			
+
+
+
+	@keyframes echo
+		0%
+			vendor-anim(prefix, transform, scale(0))
+			opacity 0
+		5%
+			opacity 1
+		100%
+			vendor-anim(prefix, transform, scale(1))
+			opacity 0
+	
+
+	@keyframes bounce
+		0%, 100%
+			vendor-anim(prefix, transform, scale(0))
+		50%
+			vendor-anim(prefix, transform, scale(1))
+
+
+
+
+	@keyframes bar-pulse
+		50%
+			vendor-anim(prefix, transform, scaleY(0.4))
+			
+	
+
+
+
+
+	keys = 25% 50% 75%
+	values1 = (270% 0%) (270% 270%) (0% 270%)
+	values2 = (0% 270%) (-270% 270%) (-270% 0%)
+	values3 = (0% -270%) (270% -270%) (270% 0%)
+	values4 = (-270% 0%) (-270% -270%) (0% -270%)
+
+
+
+	@keyframes move-quad1
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values1[i][0], values1[i][1]))
+
+	@keyframes move-quad2
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values2[i][0], values2[i][1]))
+
+	@keyframes move-quad3
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values3[i][0], values3[i][1]))
+
+	@keyframes move-quad4
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values4[i][0], values4[i][1]))
+				
+
+	
+
+
+	
+	keys = 33.3% 66.6%
+	values1 = (135% 270%) (-130% 270%)
+	values2 = (135% -270%) (270% 0%)
+	values3 = (-270% 0%) (-135% -270%)
+	
+
+
+	@keyframes move-tria1
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values1[i][0], values1[i][1]))
+
+	@keyframes move-tria2
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values2[i][0], values2[i][1]))
+
+	@keyframes move-tria3
+		for key, i in keys
+			{key}
+				vendor-anim(prefix, transform, translate(values3[i][0], values3[i][1]))
+				
+				
+
+
+
+
+
+	@keyframes square-folding1
+		0%, 70%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(0) rotateY(0))
+		10%, 60%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(0) rotateY(-180deg))
+
+	@keyframes square-folding2
+		0%, 70%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(0) rotateY(0))
+		10%, 60%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(0) rotateY(-180deg))
+					
+		20%, 50%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(180deg) rotateY(-180deg))
+
+	@keyframes square-folding3
+		10%, 60%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(0) rotateY(0))
+		20%, 50%
+			vendor-anim(prefix, transform, perspective(100px) rotateX(180deg) rotateY(0))
+			
+
+
+
+
+	offsets = (2% 2% -50% -50%) (-2% 2% 50% -50%) (2% -2% -50% 50%) (-2% -2% 50% 50%)
+
+	for offset, i in offsets
+		@keyframes rotate-diamond{i+1}
+			0%, 88%, 100%
+				vendor-anim(prefix, transform, translate(offset[0], offset[1]) rotate(0))
+			
+			12%, 76%
+				vendor-anim(prefix, transform, translate(offset[2], offset[3]) rotate(0))
+			
+			24%, 64%
+				vendor-anim(prefix, transform, translate(offset[2], offset[3]) rotate(90deg))
+			
+			36%, 52%
+				vendor-anim(prefix, transform, translate(offset[0], offset[1]) rotate(90deg))

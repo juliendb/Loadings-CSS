@@ -1,0 +1,194 @@
+.circle-bead .group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  margin: 0;
+}
+
+.circle-bead .contain {
+  position: absolute;
+  display: block;
+  width: 20%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  margin: -10%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.circle-bead .contain span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circle-bead .contain:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(200%) rotate(-45deg);
+  -moz-transform: rotate(45deg) translate(200%) rotate(-45deg);
+  -ms-transform: rotate(45deg) translate(200%) rotate(-45deg);
+  -o-transform: rotate(45deg) translate(200%) rotate(-45deg);
+  transform: rotate(45deg) translate(200%) rotate(-45deg);
+}
+
+.circle-bead .contain:nth-child(1) span {
+  -webkit-animation: group-pulse 1.2s -.2s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -.2s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -.2s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -.2s ease-in-out infinite;
+  animation: group-pulse 1.2s -.2s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(2) {
+  -webkit-transform: rotate(90deg) translate(200%) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(200%) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(200%) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(200%) rotate(-90deg);
+  transform: rotate(90deg) translate(200%) rotate(-90deg);
+}
+
+.circle-bead .contain:nth-child(2) span {
+  -webkit-animation: group-pulse 1.2s -.4s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -.4s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -.4s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -.4s ease-in-out infinite;
+  animation: group-pulse 1.2s -.4s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(3) {
+  -webkit-transform: rotate(135deg) translate(200%) rotate(-135deg);
+  -moz-transform: rotate(135deg) translate(200%) rotate(-135deg);
+  -ms-transform: rotate(135deg) translate(200%) rotate(-135deg);
+  -o-transform: rotate(135deg) translate(200%) rotate(-135deg);
+  transform: rotate(135deg) translate(200%) rotate(-135deg);
+}
+
+.circle-bead .contain:nth-child(3) span {
+  -webkit-animation: group-pulse 1.2s -.6s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -.6s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -.6s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -.6s ease-in-out infinite;
+  animation: group-pulse 1.2s -.6s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(4) {
+  -webkit-transform: rotate(180deg) translate(200%) rotate(-180deg);
+  -moz-transform: rotate(180deg) translate(200%) rotate(-180deg);
+  -ms-transform: rotate(180deg) translate(200%) rotate(-180deg);
+  -o-transform: rotate(180deg) translate(200%) rotate(-180deg);
+  transform: rotate(180deg) translate(200%) rotate(-180deg);
+}
+
+.circle-bead .contain:nth-child(4) span {
+  -webkit-animation: group-pulse 1.2s -.8s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -.8s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -.8s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -.8s ease-in-out infinite;
+  animation: group-pulse 1.2s -.8s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(5) {
+  -webkit-transform: rotate(225deg) translate(200%) rotate(-225deg);
+  -moz-transform: rotate(225deg) translate(200%) rotate(-225deg);
+  -ms-transform: rotate(225deg) translate(200%) rotate(-225deg);
+  -o-transform: rotate(225deg) translate(200%) rotate(-225deg);
+  transform: rotate(225deg) translate(200%) rotate(-225deg);
+}
+
+.circle-bead .contain:nth-child(5) span {
+  -webkit-animation: group-pulse 1.2s -1s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -1s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -1s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -1s ease-in-out infinite;
+  animation: group-pulse 1.2s -1s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(6) {
+  -webkit-transform: rotate(270deg) translate(200%) rotate(-270deg);
+  -moz-transform: rotate(270deg) translate(200%) rotate(-270deg);
+  -ms-transform: rotate(270deg) translate(200%) rotate(-270deg);
+  -o-transform: rotate(270deg) translate(200%) rotate(-270deg);
+  transform: rotate(270deg) translate(200%) rotate(-270deg);
+}
+
+.circle-bead .contain:nth-child(6) span {
+  -webkit-animation: group-pulse 1.2s -1.2s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -1.2s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -1.2s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -1.2s ease-in-out infinite;
+  animation: group-pulse 1.2s -1.2s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(7) {
+  -webkit-transform: rotate(315deg) translate(200%) rotate(-315deg);
+  -moz-transform: rotate(315deg) translate(200%) rotate(-315deg);
+  -ms-transform: rotate(315deg) translate(200%) rotate(-315deg);
+  -o-transform: rotate(315deg) translate(200%) rotate(-315deg);
+  transform: rotate(315deg) translate(200%) rotate(-315deg);
+}
+
+.circle-bead .contain:nth-child(7) span {
+  -webkit-animation: group-pulse 1.2s -1.4s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -1.4s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -1.4s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -1.4s ease-in-out infinite;
+  animation: group-pulse 1.2s -1.4s ease-in-out infinite;
+}
+
+.circle-bead .contain:nth-child(8) {
+  -webkit-transform: rotate(360deg) translate(200%) rotate(-360deg);
+  -moz-transform: rotate(360deg) translate(200%) rotate(-360deg);
+  -ms-transform: rotate(360deg) translate(200%) rotate(-360deg);
+  -o-transform: rotate(360deg) translate(200%) rotate(-360deg);
+  transform: rotate(360deg) translate(200%) rotate(-360deg);
+}
+
+.circle-bead .contain:nth-child(8) span {
+  -webkit-animation: group-pulse 1.2s -1.6s ease-in-out infinite;
+  -moz-animation: group-pulse 1.2s -1.6s ease-in-out infinite;
+  -ms-animation: group-pulse 1.2s -1.6s ease-in-out infinite;
+  -o-animation: group-pulse 1.2s -1.6s ease-in-out infinite;
+  animation: group-pulse 1.2s -1.6s ease-in-out infinite;
+}
+
+@keyframes group-pulse {
+  50% {
+    -webkit-transform: scale(.3);
+    -moz-transform: scale(.3);
+    -ms-transform: scale(.3);
+    -o-transform: scale(.3);
+    transform: scale(.3);
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes group-pulse {
+  50% {
+    -webkit-transform: scale(.3);
+    opacity: .2;
+  }
+}
+
+@-moz-keyframes group-pulse {
+  50% {
+    -moz-transform: scale(.3);
+    opacity: .2;
+  }
+}
+
+@-o-keyframes group-pulse {
+  50% {
+    -o-transform: scale(.3);
+    opacity: .2;
+  }
+}

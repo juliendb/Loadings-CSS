@@ -1,0 +1,106 @@
+.circle-turn-multiple-random .group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  margin: 0;
+}
+
+.circle-turn-multiple-random .group span {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  background: none;
+  border: solid 3px transparent;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circle-turn-multiple-random .group span:nth-child(1) {
+  width: 40%;
+  height: 40%;
+  margin: -20%;
+  -webkit-animation: group-turn-multiple 1.689s -.745s ease infinite alternate;
+  -moz-animation: group-turn-multiple 1.689s -.745s ease infinite alternate;
+  -ms-animation: group-turn-multiple 1.689s -.745s ease infinite alternate;
+  -o-animation: group-turn-multiple 1.689s -.745s ease infinite alternate;
+  animation: group-turn-multiple 1.689s -.745s ease infinite alternate;
+}
+
+.circle-turn-multiple-random .group span:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  margin: -35%;
+  -webkit-animation: group-turn-multiple 1.143s -.762s ease infinite alternate;
+  -moz-animation: group-turn-multiple 1.143s -.762s ease infinite alternate;
+  -ms-animation: group-turn-multiple 1.143s -.762s ease infinite alternate;
+  -o-animation: group-turn-multiple 1.143s -.762s ease infinite alternate;
+  animation: group-turn-multiple 1.143s -.762s ease infinite alternate;
+}
+
+.circle-turn-multiple-random .group span:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  margin: -50%;
+  -webkit-animation: group-turn-multiple 2.073s -.451s ease infinite alternate;
+  -moz-animation: group-turn-multiple 2.073s -.451s ease infinite alternate;
+  -ms-animation: group-turn-multiple 2.073s -.451s ease infinite alternate;
+  -o-animation: group-turn-multiple 2.073s -.451s ease infinite alternate;
+  animation: group-turn-multiple 2.073s -.451s ease infinite alternate;
+}
+
+@keyframes group-turn-multiple {
+  0% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  85%,100% {
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+}
+
+@-webkit-keyframes group-turn-multiple {
+  0% {
+    -webkit-transform: rotate(45deg);
+  }
+
+  85%,100% {
+    -webkit-transform: rotate(405deg);
+  }
+}
+
+@-moz-keyframes group-turn-multiple {
+  0% {
+    -moz-transform: rotate(45deg);
+  }
+
+  85%,100% {
+    -moz-transform: rotate(405deg);
+  }
+}
+
+@-o-keyframes group-turn-multiple {
+  0% {
+    -o-transform: rotate(45deg);
+  }
+
+  85%,100% {
+    -o-transform: rotate(405deg);
+  }
+}

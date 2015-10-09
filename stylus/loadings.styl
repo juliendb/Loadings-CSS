@@ -1,0 +1,140 @@
+
+@import "functions.styl"
+@import "animations.styl"
+@import "class.styl"
+
+
+
+
+.loading {
+	display block
+	width 60px
+	height 60px
+}
+
+
+
+
+.grid-square,
+.grid-circle
+	vendor-grid(#fff, linear)
+
+.grid-circle
+	span
+		vendor-border(border-radius, 50%)
+		
+
+
+
+.circle-bead
+	vendor-circle-bead(#fff, ease-in-out)
+
+	
+
+.circle-echo
+	vendor-echo(#fff, linear)
+	
+	&.circle-full .group span
+		background #fff
+	
+	&.circle-border .group span
+		background none
+		border solid 3px #fff
+		
+		vendor-border(box-sizing, border-box)
+		
+
+
+.square-bounce,
+.circle-bounce
+	vendor-bounce(#fff, ease-in-out)
+		
+.circle-bounce
+	span
+		vendor-border(border-radius, 50%)
+
+
+
+
+.circle-turn-around
+	vendor-turn-around(#fff, linear)
+	
+
+
+.circle-turn-multiple
+	vendor-turn-multiple(#fff, ease)
+	
+.circle-turn-multiple-random
+	vendor-turn-multiple-random(#fff, ease)
+
+
+
+
+
+.square-group,
+.circle-group
+	vendor-beat(#fff, linear)
+		
+.circle-group
+	.group span
+		vendor-border(border-radius, 50%)
+		
+
+
+
+.square-dual,
+.circle-dual
+	vendor-dual-beat(#fff, ease-in-out)
+		
+.circle-dual
+	.group span
+		vendor-border(border-radius, 50%)
+
+
+
+
+
+
+
+.bar-group
+	vendor-bar(#fff, linear)
+	
+
+
+.move-square-quad,
+.move-circle-quad
+	vendor-move-quad(#fff, linear)
+	
+.move-square-tria,
+.move-circle-tria
+	vendor-move-tria(#fff, linear)
+	
+.move-circle-quad,
+.move-circle-tria
+	.group span
+		vendor-border(border-radius, 50%)
+		
+
+
+.folding-square,
+.folding-circle
+	vendor(transform-style, preserve-3d)
+	vendor-folding(#fff, linear)
+
+
+
+
+.folding-circle
+	span:nth-child(1)
+		vendor-border(border-top-left-radius, 100%)
+	span:nth-child(2)
+		vendor-border(border-top-right-radius, 100%)
+	span:nth-child(3)
+		vendor-border(border-bottom-left-radius, 100%)
+	span:nth-child(4)
+		vendor-border(border-bottom-right-radius, 100%)
+
+
+
+.rotate-diamond
+	vendor-diamond(#fff, linear)
